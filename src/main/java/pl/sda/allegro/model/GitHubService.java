@@ -45,8 +45,8 @@ public class GitHubService {
         String nameOfRepository = null;
 
         for (Repository e : repositoryList) {
-            if (date_of_update == null || e.getUpdated_at().isAfter(date_of_update)) {
-                date_of_update = e.getUpdated_at();
+            if (date_of_update == null || e.getPushed_at().isAfter(date_of_update)) {
+                date_of_update = e.getPushed_at();
                 nameOfRepository = e.getName();
             }
         }
