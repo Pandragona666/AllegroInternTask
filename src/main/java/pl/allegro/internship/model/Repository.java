@@ -1,6 +1,4 @@
-package pl.sda.allegro.model;
-
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+package pl.allegro.internship.model;
 
 import java.time.LocalDateTime;
 
@@ -8,7 +6,6 @@ public class Repository {
 
     private long id;
     private String name;
-    @JsonSerialize( )
     private LocalDateTime created_at;
     private LocalDateTime updated_at;
     private LocalDateTime pushed_at;

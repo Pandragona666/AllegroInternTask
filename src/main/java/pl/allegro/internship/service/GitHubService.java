@@ -1,9 +1,10 @@
-package pl.sda.allegro.model;
+package pl.allegro.internship.service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import pl.allegro.internship.model.Repository;
 
 import java.io.IOException;
 import java.net.URL;
@@ -12,7 +13,6 @@ import java.util.List;
 
 public class GitHubService {
 
-    Repository repository;
     private String gitHubUrl;
     private List<Repository> repositoryList;
 
@@ -41,12 +41,12 @@ public class GitHubService {
 
 
     public void showLastUpdated() {
-        LocalDateTime date_of_update = null;
+        LocalDateTime dateOfUpdate = null;
         String nameOfRepository = null;
 
         for (Repository e : repositoryList) {
-            if (date_of_update == null || e.getPushed_at().isAfter(date_of_update)) {
-                date_of_update = e.getPushed_at();
+            if (dateOfUpdate == null || e.getPushed_at().isAfter(dateOfUpdate)) {
+                dateOfUpdate = e.getPushed_at();
                 nameOfRepository = e.getName();
             }
         }

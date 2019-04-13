@@ -1,6 +1,6 @@
-package pl.sda.allegro;
+package pl.allegro.internship;
 
-import pl.sda.allegro.model.GitHubService;
+import pl.allegro.internship.service.GitHubService;
 
 import java.io.IOException;
 
